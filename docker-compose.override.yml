@@ -1,0 +1,14 @@
+version: '2.1'
+
+services:
+  php:
+    image: chrisnharvey/devilbox-php-fpm:${PHP_SERVER}
+
+    ports:
+      - "${LOCAL_LISTEN_ADDR}3000:3000"
+      - "${LOCAL_LISTEN_ADDR}4000:4000"
+      - "${LOCAL_LISTEN_ADDR}5000:5000"
+      
+    volumes:
+      # Mount SSH keys path to ~/.ssh
+      - ${HOST_PATH_SSH_KEYS_DATADIR}:/home/devilbox/.ssh:rw${MOUNT_OPTIONS}

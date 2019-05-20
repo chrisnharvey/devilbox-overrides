@@ -1,5 +1,8 @@
 # Devilbox Overrides
 
+![Docker Automated build](https://img.shields.io/docker/automated/chrisnharvey/devilbox-php-fpm.svg)
+![Docker Build Status](https://img.shields.io/docker/build/chrisnharvey/devilbox-php-fpm.svg)
+
 Additional coolness for devilbox.
 
 ## How do I use this?

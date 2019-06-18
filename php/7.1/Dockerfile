@@ -4,6 +4,9 @@ FROM devilbox/php-fpm:7.1-work
 # so some repos no longer exist, so we force a 0 exit code here.
 RUN apt-get update || :
 
+# Install ghostscript
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -qq ghostscript
+
 # Install zmq
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -qq libzmq3-dev
 RUN pecl install channel://pecl.php.net/zmq-1.1.3

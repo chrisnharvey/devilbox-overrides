@@ -8,9 +8,9 @@ RUN apt-get update || :
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -qq ghostscript
 
 # Install zmq
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -qq libzmq3-dev
-RUN pecl install channel://pecl.php.net/zmq-1.1.3
-RUN docker-php-ext-enable zmq
+#RUN DEBIAN_FRONTEND=noninteractive apt-get install -qq libzmq3-dev
+#RUN pecl install channel://pecl.php.net/zmq-1.1.3
+#RUN docker-php-ext-enable zmq
 
 # Ports
 EXPOSE 9000
